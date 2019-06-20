@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Gaurav */
+
+/*
+@font-face {
+  font-family: 'YouDecide N';
+  src: url('/fonts/YouDecideN-LayerFour.woff2') format('woff2'),
+      url('/fonts/YouDecideN-LayerFour.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YouDecide N';
+  src: url('/fonts/YouDecideN-LayerTwo.woff2') format('woff2'),
+      url('/fonts/YouDecideN-LayerTwo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YouDecide N';
+  src: url('/fonts/YouDecideN-LayerThree.woff2') format('woff2'),
+      url('/fonts/YouDecideN-LayerThree.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+@font-face {
+  font-family: 'YouDecide N';
+  src: url('/fonts/YouDecideN-LayerOne.woff2') format('woff2'),
+      url('/fonts/YouDecideN-LayerOne.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+
+html, body, #root, .container{
+  height: 100%;
+}
+
+body{
+  font-family: 'YouDecide N';
+}
+
+.container{
+  background-image: url(/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'YouDecide N';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.screen-container{
+  text-align: center;
+}
+
+.brand-image{
+  margin-bottom: 140px;
+    width: 300px;
+}
+
+.btn{
+  padding:15px 80px;
+  border-radius: 15px;
+  background-color: #cc1518;
+  border: thin solid #cc1518;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.passion-input{
+  width: 550px;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 10px;
+  border: thin solid #FFF;
+  padding: 15px 15px;
+}
+
+ul{
+  height: 200px;
+  overflow: scroll;
+}
+
+li{
+  background-color: #FFF;
+  padding: 10px;
+  font-size: 2rem;
+  width: 500px;
+  margin: 0 auto;
+  border-bottom: thin solid #EFEFEF;
+}
