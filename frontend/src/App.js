@@ -331,7 +331,7 @@ class Dash extends Component {
           {this.state.tshirts.map((v, k) => (
             <tr>
               {v.date && <td>{v.date}</td>}
-              {v.passion && <td>{v.passion}</td>}
+              {v.id && <td>{v.id}</td>}
               {v.size && <td>{v.size}</td>}
             </tr>
           ))}
