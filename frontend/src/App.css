@@ -102,6 +102,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 90%;
 }
 
 h1, h2, h3 {
