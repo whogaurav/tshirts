@@ -298,6 +298,159 @@ const passions = [
   {
     name: "PERFECTION",
     id: 9
+  },
+  {
+    name: "SUCCESS",
+    id: 10
+  },
+  {
+    name: "SEXINESS",
+    id: 11
+  },
+  {
+    name: "BRILLIANCE",
+    id: 12
+  },
+  {
+    name: "ENERGY",
+    id: 13
+  },
+  {
+    name: "INGENUITY",
+    id: 14
+  },
+  {
+    name: "HUMOUR",
+    id: 15
+  },
+  {
+    name: "OPTIMISIM",
+    id: 16
+  },
+  {
+    name: "CONFIDENCE",
+    id: 17
+  },
+  {
+    name: "CREATIVITY",
+    id: 19
+  },
+  {
+    name: "GENUINENESS",
+    id: 20
+  },
+  {
+    name: "ADVENTURE",
+    id: 21
+  },
+  {
+    name: "INDEPENDENCE",
+    id: 22
+  },
+  {
+    name: "GENEROSITY",
+    id: 23
+  },
+  {
+    name: "ART",
+    id: 24
+  },
+  {
+    name: "CHARM",
+    id: 25
+  },
+  {
+    name: "AWESOMENESS",
+    id: 26
+  },
+  {
+    name: "AMBITION",
+    id: 27
+  },
+  {
+    name: "OPEN-MINDEDNESS",
+    id: 28
+  },
+  {
+    name: "ORIGINALITY",
+    id: 29
+  },
+  {
+    name: "LEADERSHIP",
+    id: 30
+  },
+  {
+    name: "BEING A WORRIOR",
+    id: 31
+  },
+  {
+    name: "POPULARITY",
+    id: 32
+  },
+  {
+    name: "DANCE",
+    id: 33
+  },
+  {
+    name: "FABULOUSNESS",
+    id: 34
+  },
+  {
+    name: "AUTHENTICITY",
+    id: 35
+  },
+  {
+    name: "LOVE",
+    id: 36
+  },
+  {
+    name: "BRAVERY",
+    id: 37
+  },
+  {
+    name: "DREAM",
+    id: 38
+  },
+  {
+    name: "GLORY",
+    id: 39
+  },
+  {
+    name: "COOL",
+    id: 40
+  },
+  {
+    name: "STYLE",
+    id: 41
+  },
+  {
+    name: "ZINE",
+    id: 42
+  },
+  {
+    name: "LW3ORIYA",
+    id: 43
+  },
+  {
+    name: "T’BOGUISSA",
+    id: 44
+  },
+  {
+    name: "SPONTANEITY",
+    id: 45
+  },
+  {
+    name: "TALENT",
+    id: 46
+  },
+  {
+    name: "BEING THE BOSS",
+    id: 47
+  },
+
+  {
+    name: "BEING UNPAIRED",
+    id: 48
   }
 ];
 
