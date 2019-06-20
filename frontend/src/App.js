@@ -26,6 +26,7 @@ class Screen1 extends Component {
 }
 
 function Screen2(props) {
+  console.log(props);
   return (
     <Layout>
       <div className="screen-container">
@@ -46,19 +47,24 @@ function Screen2(props) {
             value={
               props.passion && props.passion.name
                 ? props.passion.id + ". " + props.passion.name
-                : ""
+                : props.inputValue
             }
           />
           <div
             style={{ overflow: "scroll", position: "absolute", left: "86px" }}
           >
-            <ul>
-              {props.passions.map((value, key) => (
-                <li onClick={() => props.onClickList(value)} key={value + key}>
-                  {value.id}. {value.name}
-                </li>
-              ))}
-            </ul>
+            {props.inputValue && (
+              <ul>
+                {props.passions.map((value, key) => (
+                  <li
+                    onClick={() => props.onClickList(value)}
+                    key={value + key}
+                  >
+                    {value.id}. {value.name}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
         <Link to="/screen3">
@@ -197,6 +203,7 @@ export default class App extends Component {
   };
 
   filterList = event => {
+    this.setState({ inputValue: event.target.value });
     let updatedList = passions;
     updatedList = updatedList.filter(function(item) {
       return (
@@ -238,6 +245,7 @@ export default class App extends Component {
               onClickList={this.onClickList}
               onInputChange={this.onInputChange}
               passions={this.state.passions}
+              inputValue={this.state.inputValue}
             />
           )}
         />
