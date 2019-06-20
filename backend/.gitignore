@@ -200,7 +200,6 @@ gradle-app.setting
 *.class
 
 # Generated files
-bin/
 gen/
 out/
 
