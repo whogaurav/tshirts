@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import Layout from "./Layout";
+import { BASE_URL } from "./config";
 
 class Screen1 extends Component {
   componentDidMount() {
@@ -137,7 +138,7 @@ class Screen4 extends Component {
   };
   componentDidMount() {
     if (this.props.passion.id && this.props.size) {
-      fetch("http://localhost:3000/api/tshirts", {
+      fetch(`${BASE_URL}/api/tshirts`, {
         method: "post",
         headers: {
           Accept: "application/json, text/plain, */*",

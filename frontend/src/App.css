@@ -168,3 +168,18 @@ li{
   margin: 0 auto;
   border-bottom: thin solid #EFEFEF;
 }
+
+.warning{
+  height: 10%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFF;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
