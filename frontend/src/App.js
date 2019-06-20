@@ -256,6 +256,7 @@ export default class App extends Component {
           )}
         />
         <Route path="/screen5" exact render={() => <Screen5 />} />
+        <Route path="/dash" exact render={() => <Dash />} />
       </Router>
     );
   }
@@ -299,3 +300,43 @@ const passions = [
     id: 9
   }
 ];
+
+class Dash extends Component {
+  state = {
+    tshirts: []
+  };
+  componentDidMount() {
+    fetch(`${BASE_URL}/api/tshirts`, {
+      method: "get",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(res => {
+        this.setState({ tshirts: res });
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        <table id="customers">
+          <tr>
+            <th>Date-Time</th>
+            <th>ID</th>
+            <th>Size</th>
+          </tr>
+          {this.state.tshirts.map((v, k) => (
+            <tr>
+              {v.date && <td>{v.date}</td>}
+              {v.passion && <td>{v.passion}</td>}
+              {v.size && <td>{v.size}</td>}
+            </tr>
+          ))}
+        </table>
+      </div>
+    );
+  }
+}
