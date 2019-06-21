@@ -63,7 +63,7 @@ function Screen2(props) {
             )}
           </div>
         </div>
-        <Link to="/screen3">
+        <Link to="/screen4">
           <button className="btn" style={{ marginTop: "80px" }}>
             SUIVANT
           </button>
@@ -139,7 +139,7 @@ class Screen4 extends Component {
     error: null
   };
   componentDidMount() {
-    if (this.props.passion.id && this.props.size) {
+    if (this.props.passion.id) {
       try {
         fetch(`${BASE_URL}/api/tshirts`, {
           method: "post",
@@ -148,7 +148,7 @@ class Screen4 extends Component {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            size: this.props.size,
+            size: "N/A",
             id: this.props.passion.id
           })
         })
@@ -199,7 +199,7 @@ function Screen5() {
 
 export default class App extends Component {
   state = {
-    size: "",
+    size: "S",
     passion: {},
     inputValue: "",
     passions: passions
