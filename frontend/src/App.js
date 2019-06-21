@@ -83,15 +83,15 @@ function Screen3(props) {
         <div
           style={{
             flexDirection: "row",
-            marginTop: "5%",
-            marginBottom: "5%"
+            marginTop: "1%",
+            marginBottom: "3%"
           }}
         >
           <img
             src="/images/S.png"
             alt="S"
             style={{
-              width: "30%",
+              width: "20%",
               border:
                 props.size === "S"
                   ? "thin solid #FFF"
@@ -103,7 +103,7 @@ function Screen3(props) {
             src="/images/M.png"
             alt="M"
             style={{
-              width: "30%",
+              width: "25%",
               border:
                 props.size === "M"
                   ? "thin solid #FFF"
