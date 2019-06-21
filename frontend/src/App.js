@@ -38,7 +38,7 @@ function Screen2(props) {
         <h1 style={{ marginTop: "8%", marginBottom: "10%" }}>
           Quelle est ta vraie passion ?
         </h1>
-        <div style={{ position: "relative", height: "200px" }}>
+        <div style={{ position: "relative", height: "235px" }}>
           <input
             type="text"
             className="passion-input"
