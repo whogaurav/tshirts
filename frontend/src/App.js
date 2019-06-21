@@ -44,11 +44,7 @@ function Screen2(props) {
             className="passion-input"
             placeholder="Quelle est ta vraie passion ?"
             onChange={props.filterList}
-            value={
-              props.passion && props.passion.name
-                ? props.passion.id + ". " + props.passion.name
-                : props.inputValue
-            }
+            value={props.inputValue}
           />
           <div
             style={{ overflow: "scroll", position: "absolute", left: "86px" }}
@@ -60,7 +56,7 @@ function Screen2(props) {
                     onClick={() => props.onClickList(value)}
                     key={value + key}
                   >
-                    {value.id}. {value.name}
+                    {value.name}
                   </li>
                 ))}
               </ul>
@@ -144,19 +140,29 @@ class Screen4 extends Component {
   };
   componentDidMount() {
     if (this.props.passion.id && this.props.size) {
-      fetch(`${BASE_URL}/api/tshirts`, {
-        method: "post",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          size: this.props.size,
-          id: this.props.passion.id
+      try {
+        fetch(`${BASE_URL}/api/tshirts`, {
+          method: "post",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            size: this.props.size,
+            id: this.props.passion.id
+          })
         })
-      })
-        .then(res => res.json())
-        .then(res => console.log(res));
+          .then(res => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              alert("Not connected to internet");
+            }
+          })
+          .then(res => console.log(res));
+      } catch {
+        alert("Not connected to internet");
+      }
     } else {
       this.setState({
         error: "Error! Not submitted  - please go back and fill all the details"
@@ -220,8 +226,8 @@ export default class App extends Component {
     this.setState({ inputValue: inputValue });
   };
   onClickList = passion => {
-    console.log(passion);
-    this.setState({ passion: passion });
+    //console.log(passion);
+    this.setState({ passion: passion, inputValue: passion.name });
   };
   reset = () => {
     this.setState({
