@@ -177,9 +177,6 @@ class Screen4 extends Component {
         <h1>au desk d’accuiel</h1>
         <br />
         <br />
-        <h2>Passion: {this.props.passion.name}</h2>
-        <br />
-        <h2>Size: {this.props.size}</h2>
 
         <h3>{this.state.error && this.state.error}</h3>
         <Link to="/">
